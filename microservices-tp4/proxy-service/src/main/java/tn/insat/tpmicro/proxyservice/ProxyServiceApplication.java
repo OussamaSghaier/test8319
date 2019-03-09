@@ -12,5 +12,7 @@ public class ProxyServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProxyServiceApplication.class, args);
+		int a=0;
+		a++;
 	}
 }
