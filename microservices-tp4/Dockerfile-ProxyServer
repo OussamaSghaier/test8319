@@ -1,0 +1,7 @@
+FROM alpine-java:base
+MAINTAINER javaonfly
+RUN apk --no-cache add netcat-openbsd
+COPY proxy-service/target/proxy-service-0.0.1-SNAPSHOT.jar /opt/lib/
+COPY proxyservice-entrypoint.sh /opt/bin/
+RUN chmod 755 /opt/bin/proxyservice-entrypoint.sh
+EXPOSE 9999

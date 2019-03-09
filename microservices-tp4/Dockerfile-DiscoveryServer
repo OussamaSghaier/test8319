@@ -1,0 +1,7 @@
+FROM alpine-java:base
+MAINTAINER javaonfly
+RUN apk --no-cache add netcat-openbsd
+COPY discovery-service/target/discovery-service-0.0.1-SNAPSHOT.jar /opt/lib/
+COPY discoveryservice-entrypoint.sh /opt/bin/
+RUN chmod 755 /opt/bin/discoveryservice-entrypoint.sh
+EXPOSE 8761
