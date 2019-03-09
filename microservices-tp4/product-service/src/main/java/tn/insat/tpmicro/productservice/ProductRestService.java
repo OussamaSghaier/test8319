@@ -13,6 +13,9 @@ public class ProductRestService {
     @RequestMapping("/messages")
     public String tellMe(){
         System.out.println("c'est moi qui ait répondu!");
+        int v;v++;
+        v--;
+        
         return me;
     }
 }

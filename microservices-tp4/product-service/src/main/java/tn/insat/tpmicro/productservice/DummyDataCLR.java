@@ -13,6 +13,7 @@ class DummyDataCLR implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         Stream.of("Pencil", "Book", "Eraser").forEach(s->productRepository.save(new Product(s)));
         productRepository.findAll().forEach(s->System.out.println(s.getName()));
+        System.out.println("Ici c'est PARIS!");
     }
 
     @Autowired
